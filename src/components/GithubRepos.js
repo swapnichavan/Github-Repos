@@ -54,7 +54,8 @@ class GithubRepos extends Component {
            justify-content-center">
            {langs.map((lang,index)=>
             <ul key={index}>
-           	<li className="lan m-2"
+           	<li
+            style={lang === this.state.lang?{color:"red"}:null}
            	onClick={()=>this.onSelectedLang(lang)}
            	>{lang}</li>
             </ul>
